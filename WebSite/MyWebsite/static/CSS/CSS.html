@@ -1,0 +1,50 @@
+
+<div class="row">
+    <p>
+        CSS is a language that describes the style of an HTML document.
+        CSS describes how HTML elements should be displayed.
+        CSS is designed primarily to enable the separation of document content from document presentation,
+        including aspects such as the layout, colors, and fonts.
+    </p>
+</div>
+<div class="row" ng-controller="CssControler as CtrlCss">
+    <div id="cssaccordian" class="panel-group col-md-4">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <div class="panel-title">
+                    <a href="#cssBasic" data-toggle="collapse" data-parent="#cssBasic">CSS Basic</a>
+                </div>
+            </div>
+            <div id="cssBasic" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <ul>
+                        <li ng-click="CtrlCss.SetDetailSection('VersionHistory')">CSS Evolution</li>
+                        <li ng-click="CtrlCss.SetDetailSection('CssIntro')"> Introduction to CSS  </li>
+                        <li ng-click="CtrlCss.SetDetailSection('CssSyntax')"> Syntax </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <div class="panel-title">
+                    <a href="#cssStyling" data-toggle="collapse" data-parent="#cssStyling">Styling</a>
+                </div>
+            </div>
+            <div id="cssStyling" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <ul>
+                        <li ng-click="CtrlCss.SetDetailSection('Font')">Font</li>
+                        <li ng-click="CtrlCss.SetDetailSection('CssIntro')"> Introduction to CSS  </li>
+                        <li ng-click="CtrlCss.SetDetailSection('CssSyntax')"> Syntax </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div id="contentdiv" ng-bind-html="CtrlCss.DivSection">
+        </div>
+    </div>
+</div>

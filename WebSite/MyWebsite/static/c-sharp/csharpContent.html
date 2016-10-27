@@ -1,0 +1,935 @@
+    <!-- #region C# 1.0 -->
+
+    <div id="ManagedCode" class="container-outsider">
+        <div class="container-fixed">
+            <div class="row">
+                <div class="col-md-6">
+                    Code written with a language compiler that targets the runtime .NET CLR (Common Language Runtime) is called
+                    <strong> Managed code</strong>
+                    <article>
+                        The Common Language Runtime (CLR), the virtual machine component of Microsoft's .NET framework, manages the execution of .NET programs. Language Compiler compiles .NET Code into MSIL (MicroSoft Intermidiate Lanaguage). JIT (Just In Time) Compiler converts MSIL Code into Machine code which then gets executes.
+
+                        <blockquote>Benefits of writting ManageCode (CLR)</blockquote>
+                        <ul>
+                            <li>Memory Management:</li>
+                            <li>Type safety :</li>
+                            <li>Exception Handling :</li>
+                            <li>Garbage Collection :</li>
+                            <li>Security:</li>
+                            <li>Thread Management :</li>
+                        </ul>
+
+                    </article>
+
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        <img src="images\MSILCode.jpg" alt="Alternate Text" width="100%" />
+                    </div>
+                    <br />
+                    <div>
+                        <table class="table table-bordered">
+                            <tr>
+                                <th> CLR Version</th>
+                                <th>.NET Version</th>
+                            </tr>
+                            <tr>
+                                <td> 1.0</td>
+                                <td>1.0</td>
+                            </tr>
+                            <tr>
+                                <td> 1.1</td>
+                                <td>1.1</td>
+                            </tr>
+                            <tr>
+                                <td> 2.0</td>
+                                <td>2.0, &nbsp; 3.0, &nbsp; 3.5</td>
+                            </tr>
+                            <tr>
+                                <td> 4.0</td>
+                                <td>4.0, &nbsp; 4.5, &nbsp; 4.6</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="VSversion" class="container-outsider">
+        <div class="container-fixed">
+            <div class="row">
+                <table class="table table-bordered">
+                    <tr>
+                        <th>Product name</th>
+                        <th>Codename</th>
+                        <th>Version number</th>
+                        <th>
+                            Version of
+                            <br />
+                            <a href="/wiki/Visual_C%2B%2B" title="Visual C++">cl.exe</a>
+                        </th>
+                        <th>
+                            Supported .NET
+                            <br />
+                            Framework versions
+                        </th>
+                        <th>Release date</th>
+                    </tr>
+                    <tr>
+                        <th>Visual Studio 97</th>
+                        <td>
+                            <i>Boston</i>
+                        </td>
+                        <td>5.0</td>
+                        <td>N/A</td>
+                        <td data-sort-value="" style="background: #ececec; color: #2C2C2C; vertical-align: middle; font-size: smaller; text-align: center;" class="table-na">N/A</td>
+                        <td>
+                            <span class="sortkey" style="display:none;speak:none">000000001997-02-01-0000</span>
+                            <span style="white-space:nowrap">February 1997</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Visual Studio 6.0</th>
+                        <td>
+                            <i>Aspen</i>
+                        </td>
+                        <td>6.0</td>
+                        <td>12.00</td>
+                        <td data-sort-value="" style="background: #ececec; color: #2C2C2C; vertical-align: middle; font-size: smaller; text-align: center;" class="table-na">N/A</td>
+                        <td>
+                            <span class="sortkey" style="display:none;speak:none">000000001998-06-01-0000</span>
+                            <span style="white-space:nowrap">June 1998</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Visual Studio .NET (2002)</th>
+                        <td>
+                            <i>Rainier</i>
+                        </td>
+                        <td>7.0</td>
+                        <td>13.00</td>
+                        <td>1.0</td>
+                        <td>
+                            <span class="sortkey" style="display:none;speak:none">000000002002-02-13-0000</span>
+                            <span style="white-space:nowrap">February 13, 2002</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Visual Studio .NET 2003</th>
+                        <td>
+                            <i>Everett</i>
+                        </td>
+                        <td>7.1</td>
+                        <td>13.10</td>
+                        <td>1.1</td>
+                        <td>
+                            <span class="sortkey" style="display:none;speak:none">000000002003-04-24-0000</span>
+                            <span style="white-space:nowrap">April 24, 2003</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Visual Studio 2005</th>
+                        <td>
+                            <i>Whidbey</i>
+                        </td>
+                        <td>8.0</td>
+                        <td>14.00</td>
+                        <td>2.0, 3.0</td>
+                        <td>
+                            <span class="sortkey" style="display:none;speak:none">000000002005-11-07-0000</span>
+                            <span style="white-space:nowrap">November 7, 2005</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Visual Studio 2008</th>
+                        <td>
+                            <i>Orcas</i>
+                        </td>
+                        <td>9.0</td>
+                        <td>15.00</td>
+                        <td>2.0, 3.0, 3.5</td>
+                        <td>
+                            <span class="sortkey" style="display:none;speak:none">000000002007-11-19-0000</span>
+                            <span style="white-space:nowrap">November 19, 2007</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Visual Studio 2010</th>
+                        <td>
+                            <i>Dev10</i>/
+                            <i>Rosario</i>
+                        </td>
+                        <td>10.0</td>
+                        <td>16.00</td>
+                        <td>2.0 – 4.0</td>
+                        <td>
+                            <span class="sortkey" style="display:none;speak:none">000000002010-04-12-0000</span>
+                            <span style="white-space:nowrap">April 12, 2010</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Visual Studio 2012</th>
+                        <td>
+                            <i>Dev11</i>
+                        </td>
+                        <td>11.0</td>
+                        <td>17.00</td>
+                        <td>2.0 – 4.5.2</td>
+                        <td>
+                            <span class="sortkey" style="display:none;speak:none">000000002012-09-12-0000</span>
+                            <span style="white-space:nowrap">September 12, 2012</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Visual Studio 2013</th>
+                        <td>
+                            <i>Dev12</i>
+                        </td>
+                        <td>12.0</td>
+                        <td>18.00</td>
+                        <td>2.0 – 4.5.2</td>
+                        <td>
+                            <span class="sortkey" style="display:none;speak:none">000000002013-10-17-0000</span>
+                            <span style="white-space:nowrap">October 17, 2013</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Visual Studio 2015</th>
+                        <td>
+                            <i>Dev14</i>
+                        </td>
+                        <td>14.0</td>
+                        <td>19.00</td>
+                        <td>2.0 – 4.6</td>
+                        <td>
+                            <span class="sortkey" style="display:none;speak:none">000000002015-07-20-0000</span>
+                            <span style="white-space:nowrap">July 20, 2015</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Visual Studio "15"</th>
+                        <td>
+                            <i>Dev15</i>
+                        </td>
+                        <td>15.0</td>
+                        <td>19.00</td>
+                        <td>
+                            2.0 – 4.6.2;
+                            <a href="/wiki/.NET_Framework#.NET_Core" title=".NET Framework">Core 1.0</a>
+                        </td>
+                        <td style="background: #DDF; color: #2C2C2C; vertical-align: middle; text-align: center;" class="no table-no2">TBA</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div id="DotNetversion1" class="container-outsider">
+        <div class="container-fixed">
+            <div class="row">
+                .Net Framework is inception started from version 1.0 and then evolved with each new version retains features
+                from it's previous version and added new features. Each .Net Framework has Core Components:
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-sm-6 col-lg-4 col-md-5">
+                    <ul>
+                        <li>Common Language Runtime (CLR)</li>
+                        <li>Common Type System (CTS)</li>
+                        <li>Base Class Library</li>
+                        <li>Code Access Security (CAS)</li>
+                        <li>Garbage Collector (GC)</li>
+                    </ul>
+                </div>
+                <div class="col-lg-8 hidden-sm">
+                    <img src="images/dotnetFramework1.gif" />
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- #endregion -->
+    <!-- #region C# 2.0 -->
+    <div id="genericDiv" class="container-outsider">
+        <div class="container-fixed">
+            <div class="row">
+                <div class="col-sm-12">
+                    <em>Generic</em> is type-safe way of re-using the code. Generic enables to write Type parameterised class and methods
+                    that deferred it's implementation until it's instantiated.
+                    <ul>
+                        <li> Use generic types to maximize code reuse, type safety, and performance. </li>
+                        <li> The most common use of generics is to create collection classes.</li>
+                        <li>
+                            The .NET Framework class library contains several new generic collection classes in the
+                            <code>System.Collections.Generic</code> namespace. These should be used whenever possible in place of classes such as ArrayList in the System.Collections namespace.
+                        </li>
+                        <li> You can create your own generic interfaces, classes, methods, events and delegates.</li>
+                        <li> Generic classes may be constrained to enable access to methods on particular data types.</li>
+                        <li> Information on the types used in a generic data type may be obtained at run-time by means of reflection.</li>
+                    </ul>
+                    <div class="codeSnippetContainerCodeContainer">
+                        <pre><span style="color:Blue;">public</span> <span style="color:Blue;">interface</span> ISessionChannel&lt;TSession&gt; { <span style="color:Green;">/*...*/</span> }
+<span style="color:Blue;">public</span> <span style="color:Blue;">delegate</span> TOutput Converter&lt;TInput, TOutput&gt;(TInput <span style="color:Blue;">from</span>);
+<span style="color:Blue;">public</span> <span style="color:Blue;">class</span> List&lt;T&gt; { <span style="color:Green;">/*...*/</span> }
+</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="iteratorDiv" class="container-outsider">
+        <div class="container-fixed">
+            <div class="row">
+                <em>Iterator</em> enables to use
+                <code>foreach</code> loop on collections
+            </div>
+        </div>
+    </div>
+    <div id="PartialClassDiv" class="container-outsider">
+        <div class="container-fixed">
+            <div class="row">
+                Partial type definitions allow a single type, such as a class, to be split into multiple files.
+                The Visual Studio designer uses this feature to separate its generated code from user code.
+            </div>
+        </div>
+    </div>
+    <div id="NullableTypeDiv" class="container-outsider">
+        <div class="container-fixed">
+            <div class="row">
+                Nullable Types enables a value type variable to hold
+                <code>null</code> value.
+                Nullable types are instances of the System.Nullable struct.
+                <div class="codeSnippetContainerCodeContainer">
+                    The syntax T? is shorthand for System.Nullable
+                    <T>, where T is a value type. The two forms are interchangeable.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="StaticTypeDiv" class="container-outsider">
+        <div class="container-fixed">
+            <div class="row">
+                <em>static</em> class a way to define a class
+                <code>static</code> wherein it's instance creation is prevented using
+                <code>new</code> keyword.
+                static class can hold static members (such as staic method,variables). Static classes are loaded automatically by the .NET Framework common language runtime (CLR) when the program or namespace containing the class is loaded.
+                static members is invoked by prefix it with class name.
+                <span class="clearfix" />
+                The main features of a static class are:
+                <ul class="clearfix">
+                    <li>They only contain static members.</li>
+                    <li>They cannot be instantiated.</li>
+                    <li>They are sealed.</li>
+                    <li>They cannot contain Instance Constructors.</li>
+                </ul>
+                <div class="codeSnippetContainerCodeContainer">
+                    <pre>
+                    <span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">class</span> Automobile
+                {
+                    <span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">int</span> NumberOfWheels = 4;
+                    <span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">int</span> SizeOfGasTank
+                {
+                    <span style="color:Blue;">get</span>{<span style="color:Blue;">return</span> 15;}
+                }
+                    <span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">void</span> Drive() { }
+                    <span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">event</span> EventType RunOutOfGas;
+                }
+                </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="AnonymousDiv" class="container-outsider">
+        <div class="container-fixed">
+            <div class="row">
+                It is now possible to pass a block of code as a parameter. Anywhere a
+                <code>delegate</code> is expected, a code block can be used instead: there is no need to define a new method.
+                <div class="codeSnippetContainerCodeContainer">
+                    <pre><span style="color:Green;">// Create a handler for a click event</span>
+button1.Click += <span style="color:Blue;">delegate</span>(System.Object o, System.EventArgs e)
+                   { System.Windows.Forms.MessageBox.Show(<span style="color:#A31515;">"Click!"</span>); };
+</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="AsymmetricPropDiv" class="container-outsider">
+        <div class="container-fixed">
+            <div class="row">
+                Properties are defined on
+                <code>private</code> fields of class. It is defined using
+                <code>get;set;</code>accessor.
+                <span class="clearfix" />
+                <p>
+                    Properties combine aspects of both fields and methods.
+                    To the user of an object, a property appears to be a field, accessing the property requires exactly the same syntax.
+                    To the implementer of a class, a property is one or two code blocks, representing a get accessor and/or a set accessor.
+                    The code block for the get accessor is executed when the property is read; the code block for the set accessor is executed when the property is assigned a new value.
+                    <span class="clearfix" />
+                    A property without a set accessor is considered
+                    <em>read-only</em>.
+                    <span class="clearfix" />
+                    A property without a get accessor is considered
+                    <em>write-only.</em>
+                    <span class="clearfix" />
+                    A property with both accessors is
+                    <em>read-write.</em>
+                    <span class="clearfix" />
+                    <em>Asymmetric</em> property signifies that get accessor have the ability to a different value. (than the value assigned in 'set')
+                    <div class="codeSnippetContainerCodeContainer">
+                        <pre><span style="color:Blue;">public</span> <span style="color:Blue;">class</span> Date
+                {
+                        <span style="color:Blue;">private</span> <span style="color:Blue;">int</span> month = 7;  <span style="color:Green;">//"backing store"</span>
+                        <span style="color:Blue;">public</span> <span style="color:Blue;">int</span> Month
+                    {
+                        <span style="color:Blue;">get</span>
+                        {
+                        <span style="color:Blue;">return</span> month;
+                        }
+                        <span style="color:Blue;">set</span>
+                        {
+                        <span style="color:Blue;">if</span> ((value &gt; 0) &amp;&amp; (value &lt; 13))
+                            {
+                                month = value;
+                            }
+                        }
+                    }
+                }
+            </pre>
+
+                    </div>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="VarianceDiv" class="container-outsider">
+        <div class="container-fixed">
+            <div class="row">
+                <em>Vairiance: difference. How different are 2 things </em>
+                <div class="clearfix">
+                    <em>Covariance</em> means we can substitute derived type in place of base type
+                    <br />
+                    <em>Contravariance </em>means base class can be substitute in place of derived class
+                    <br />
+                    In C#, covariance and contravariance enable implicit reference conversion for array types, delegate types, and
+                    generic type arguments.Covariance preserves assignment compatibility and contravariance reverses it.
+                    <span class="clearfix" />
+                    Variance support in C# evolved with language version:
+                    <ul>
+                        <li>Covariance in arrays (since C# 1.0) </li>
+                        <li>Covariance and contravariance in delegates, also known as "method group variance" (since C# 2.0)</li>
+                        <li>
+                            Variance for generic type parameters in interfaces and delegates (since C# 4.0).
+                            In the .NET Framework 4, variant type parameters are restricted to generic interface and generic delegate types.
+                        </li>
+                        <li>Contravariance is widely used in delegates, wherein the input parameter is BaseType (contra) and Output is dervied type</li>
+                    </ul>
+                    <div class="codeSnippetContainerCodeContainer">
+                        <pre>
+                        <code>string B;</code>
+                        <code>object A;</code>
+                        <code>A = B;</code> <span class="comment">// Is Covairant, that preserves implicit assignment</span>
+                            
+                        <span class="comment">/* C# 4.0 introduce Covariance and Contravariance in Generics: */</span>
+                           IEnumerable &lt;Derived&gt; d = new List &lt;Derived&gt; ();
+                           IEnumerable &lt;Base&gt;  b = d;
+                    </pre>
+                    </div>
+                    <p>
+                        More info:
+                        <a href="https://msdn.microsoft.com/en-us/library/dd799517(v=vs.110).aspx">MSDN Link</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="VS2005Div" class="container-outsider">
+        <div class="container-fixed">
+            <div class="row">
+                <em>VS-2005</em>: is an Intergrated Development Enviroment (IDE) from Mircosoft. In 2005 version is introducted many new features to make development exprience fast and productive
+                <span class="clearfix">New Features</span>
+                <ul>
+                    <li>
+                        <strong>Designer</strong> : is a new ToolBox Section in VS2005 that enables to create
+                        <code>class</code> diagram which emits code in Code-Behind .cs file and vice-versa
+                    </li>
+                    <li>
+                        <strong>Snippet</strong> feature in VS2005 code editor enables to generate boiler-plate code for common tasks. Rather you code everything from scratch
+                    </li>
+                    <li>
+                        <strong>Surround with</strong> is another new feature in VS2005, that inserts code around the "selected code". e.g: want to moved a block of code in try/catch, just select the piece of code and right-click to get surround with options.
+                    </li>
+                    <li>
+                        <strong>IntelliSense Enhancements</strong> it is updated to recognize Generic Type, auto-suggest missing namespace.
+                    </li>
+                    <li>
+                        <strong>IDE Options and Settings</strong> You can configure default settings for VS2005 in terms of Fonts / language /Code-formatting / debug enviorment settings
+                    </li>
+                    <li>
+                        <strong>Assembly Signing</strong> IDE VS2005, you can set strong naming assembly from Projects Properties window > signing option.
+                    </li>
+                    <li>
+                        <strong>Code Analysis Integration</strong> FXCop is integrated as part of VS2005
+                    </li>
+                    <li>
+                        <strong>Debug (Edit &amp; Continue )</strong> is powerful feature that allows you to modify source code while a program is in break mode. You can resume execution of your program with the new changes applied
+                    </li>
+                    <li>
+                        <strong>ClickOnce Deployment</strong> is a deployment technology that allows you to create self-updating Windows-based applications that can be installed and run with minimal user interaction.ClickOnce application can be publish in three different ways: from a Web page, from a network file share, or from media such as a CD-ROM
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="NETFramework2" class="container-outsider">
+        <div class="container-fixed">
+            <div class="row">
+                <strong>64 bit Platform Support</strong>: Beginning in Visual Studio 2005 you can compile your application and specify that it should run on a 64-bit operating system either as a native application or under WOW64. WOW64 is a compatibility environment provided by the operating system that allows a 32-bit application to run on a Windows 64-bit operating system.
+                <span class="clearfix" />
+                <strong>New Features in ADO.NET</strong>: With 2.0 Framework, there were a number new features in ADO.NET.
+                <ul>
+                    <li>
+                        <em>Asynchronous Processing</em>: Several Asynchronous SqlCommand methods were introduced
+                        <code>BeginExecuteNonQuery, BeginExecuteReader,BeginExecuteXmlReader,EndExecuteNonQuery,EndExecuteReader, and EndExecuteXmlReader</code>
+                    </li>
+                    <li>
+                        <em>Multiple Access Result Sets (MARS)</em>: allows the execution of multiple batches on a single connection.
+                    </li>
+                    <li>
+                        <em>Bulk Copy Operations</em>:The SqlBulkCopy class allows you to write managed code solutions that provide moving data from one table to another, whether on a single server or between servers.
+                    </li>
+                    <li>
+                        <em>Support for Sql 'max' type</em>:
+                    </li>
+                    <li>
+                        <em>User Defined DataType</em>
+                    </li>
+                </ul>
+                <span class="clearfix" />
+                <strong>ASP.NET Enhancements</strong>: With .NET Framework 2.0 ASP.NET is revamp completely making it  more powerfull and productive
+                <ul>
+                    <li>
+                        <em>Code-behind model</em>: ASP.NET implemented Partial class feature to separate HTML and C# code in different files.
+                    </li>
+                    <li>
+                        <em>New Controls introduced</em>: ASP.NET added power-full new data controls (GridView, FormView, DetailsView),data access (SqlDataSource, ObjectDataSource, XmlDataSource controls),Navigation controls
+                    </li>
+                    <li>
+                        <em>Master pages</em>: With Master page, a consistent look and feel can be implemented
+                    </li>
+                    <li>
+                        <em>Login Controls</em>: Login Controls were introduced in ASP.NET 2.0. Login control group is made of :
+                        <code>Login, LoginView,PasswordRecovery,LoginStatus,LoginName,CreateUserWizard,ChangePassword</code>
+                    </li>
+                    <li>
+                        <em>Themes</em>: is a collection of property settings that enables developers to manage applications's look and feel from central location ("App_Themes"). It contains skin files, css and images
+                    </li>
+                    <li>
+                        <em>Skins</em>:A skin file has the file name extension .skin and contains property settings for individual controls such as Button, Label, TextBox, or Calendar controls. Control skin settings are like the control markup itself, but contain only the properties you want to set as part of the theme.
+                    </li>
+                    <li>
+                        <em>Web parts</em>
+                    </li>
+                    <li>
+                        <em>Personalization services</em>
+                    </li>
+                    <li>
+                        <em>Full pre-compilation</em>
+                    </li>
+                    <li>
+                        <em>New localization technique</em>
+                    </li>
+                    <li>
+                        <em>Support for 64-bit processors</em>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- #endregion -->
+    <!-- #region C# 3.0 -->
+    <div id="implicittypeDiv" class="container-outsider">
+        <div class="container-fixed">
+            <div class="row">
+                <strong>Implicitly typed local variable</strong>
+                <code>(var)</code>: being declared is inferred from the expression used to initialize the variable. Following restrictions are subjected to implict type variable declaration
+                <ul>
+                    <li>The declarator must include an initializer.</li>
+                    <li>The initializer must be an expression.</li>
+                    <li>The initializer expression must have a compile-time type which cannot be the null type.</li>
+                    <li>The local variable declaration cannot include multiple declarators.</li>
+                    <li>The initializer cannot refer to the declared variable itself</li>
+                </ul>
+                <div class="codeSnippetContainerCodeContainer">
+                    <pre>
+            var x;               // Error, no initializer to infer type from
+            var y = {1, 2, 3};   // Error, collection initializer not permitted
+            var z = null;        // Error, null type not permitted
+            var u = x => x + 1;  // Error, lambda expressions do not have a type
+            var v = v++;         // Error, initializer cannot refer to variable itself
+                </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="partialMethodDiv" class="container-outsider">
+        <div class="container-fixed">
+            <div class="row">
+                Partial method has its signature defined in one part of a partial type, and its implementation defined in another part of the type. Partial methods enable class designers to provide method hooks, similar to event handlers, that developers may decide to implement or not. If the developer does not supply an implementation, the compiler removes the signature at compile time.
+                <span class="clearfix" />
+                The following conditions apply to partial methods:
+                <ul>
+                    <li>Signatures in both parts of the partial type must match.</li>
+                    <li>The method must return void.</li>
+                    <li>No access modifiers or attributes are allowed. Partial methods are implicitly private.</li>
+                </ul>
+                <div class="codeSnippetContainerCodeContainer">
+                    <pre>
+                        namespace PM
+                        {
+                            partial class A
+                            {
+                                partial void OnSomethingHappened(string s);
+                            }
+                            // This part can be in a separate file.
+                            partial class A
+                            {
+                                // Comment out this method and the program
+                                // will still compile.
+                                partial void OnSomethingHappened(String s)
+                                {
+                                    Console.WriteLine("Something happened: {0}", s);
+                                }
+                            }
+                        }
+                </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="AnonymousTypeDiv" class="container-outsider">
+        <div class="container-fixed">
+            <div class="row">
+                <em>Anonymous Type</em>: is a nameless class. It is created using
+                <code>new</code> keyword. It is convenient way to encapsulate a set of read-only properties into a single object. Anonymous type are widely used in Linq queries.
+                <span class="clearfix"></span>
+                <span class="glyphicon glyphicon-info-sign"></span>Anonymous types are class types that derive directly from object, and that cannot be cast to any type except object. No methods/events/delegates can be declared in Anonymous class
+                <div class="codeSnippetContainerCodeContainer">
+                    <pre>
+            var v = new { Amount = 108, Message = "Hello" };
+                    <span class="comment">
+            // Rest the mouse pointer over v.Amount and v.Message in the following
+            // statement to verify that their inferred types are int and string.</span>
+            Console.WriteLine(v.Amount + v.Message);
+            </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="ObjectInitializerDiv" class="container-outsider">
+        <div class="container-fixed">
+            <div class="row">
+                <em>Object initializers</em> let you assign values to any accessible fields or properties of an object at creation time without having to invoke a constructor followed by lines of assignment statements.
+                <span class="clearfix"></span>
+                <span class="glyphicon glyphicon-info-sign" aria-hidden="true"> </span>Collection initilizer 'type' must be of
+                <code>System.Collection.IEnumerable</code>
+                <div class="codeSnippetContainerCodeContainer">
+                    <pre>
+                    <span class="comment"> /*object Initializer */</span>
+            Cat cat = new Cat { Age = 10, Name = "Fluffy" };
+                    
+                    <span class="comment"> /* Object initializer is commonly used in LINQ and Anonymous object*/</span>
+                  
+            // Object Initializer with Anonymous type
+            var Animal = new { Name="Tommy" Age="10"};
+                    
+            // Object Initializer with Linq
+            var Animal = from p in AnimalsList Select new { p.name };
+            // Collection Initilaizer
+            List &lt;int&gt; digits = new List&lt;int&gt;  { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+        </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="AutoImplementPropertyDiv" class="container-outsider">
+        <div class="container-fixed">
+            <div class="row">
+                <em>Auto-implemented</em> properties makes properties declaration more concise with
+                <code>{get;set;}</code>
+                <span class="clearfix"></span>
+                <code> public Name { get; set; };</code>
+                <span class="clearfix"></span>
+
+                <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+                With C# 6.0, auto-implented property can be intialized along declaration
+                <span class="clearfix"></span>
+                <code> public Name { get; set; } = "Rony";</code>
+            </div>
+        </div>
+    </div>
+    <div id="ExtensionMethodDiv" class="container-outsider">
+        <div class="container-fixed">
+            <div class="row">
+                <em>Extention Method</em>: is a way to add new method on any existing type without actually modifying the orginal (extnended) type.
+                It is a static method that takes first argument as "this" of type class on which this extention method would be invoked.
+                Though Extention method is static method in a static class is called on instance variable of the type like any other instance method.
+                <span class="clearfix"></span>
+                <ul>
+                    <li>An extension method must be defined in a static class.</li>
+                    <li>An extension method must be defined as a static method.</li>
+                    <li>An extension method's first parameter must take the following form, where type is the name of the type to be extended: this type parameterName</li>
+                    <li>An extension method may optionally define other parameters to follow the this parameter.</li>
+                </ul>
+                syntax: <code>public static void MethodName(this TypeName obj)</code>
+                <div class="codeSnippetContainerCodeContainer">
+                    <pre>
+using System;
+using System.Text;
+using ThirdPartyClass.myclass;
+namespace ExtensionMethodExample
+{
+    public static class A
+    {
+         public static void NewMethod(this myclass ob)
+        {
+            Console.WriteLine("Hello I m extended method");
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            myclass ob = new myclass();
+            ob.Display();
+            ob.Print();
+            ob.NewMethod();
+            Console.ReadKey();
+        }
+    }
+}
+            </pre>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div id="LinqDiv" class="container-outsider">
+        <div class="container-fixed">
+            <div class="row">
+                <em>LINQ</em>: Language Integrated Query is a general purpose  query language for many kinds of data sources including plain object collections, XML documents, databases, etc.
+                To use LINQ larger number of LINQ enabled functions were added to many collections via <blockquote>System.Linq.Extensible</blockquote>.
+                These function use LAMDA and Expression tree to query IEumerable imlemented collections
+                Alternatively, you can write queries on these collections
+                <div class="codeSnippetContainerCodeContainer">
+                    <pre>
+    int[] array = { 1, 5, 2, 10, 7 };
+    // Select squares of all odd numbers in the array sorted in descending order (wrting query)
+    IEnumerable<int> query = from x in array
+                                where x % 2 == 1
+                                orderby x descending
+                                select x * x;
+    IEnumerable<int> query = array.Where(x => x % 2 == 1).OrderByDescending(x => x).Select(x => x * x);
+                                
+    //Both above queries- Result: 49, 25, 1
+            </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="QueryExpressionDiv" class="container-outsider">
+        <div class="container-fixed">
+            <div class="row">
+                <em>Query expression</em>: A query expression must begin with a
+                <code>from</code> clause and must end with a <code>select</code> or<code>group</code>  clause.
+                Between the first from clause and the last select or group clause, it can contain one or more of
+                these optional clauses: <code>where, orderby, join, let</code> and even additional from clauses. You can also use the
+                <code>into</code> keyword to enable the result of a join or group clause to serve as the source for additional query clauses in the same query expression.
+                <span class="clearfix" />
+                A <em>Query Variable</em> is defered its execution until the variable is acually accessed. Like below example
+                <div class="codeSnippetContainerCodeContainer">
+                    <pre>
+        static void Main()
+        {
+            // Data source.
+            int[] scores = { 90, 71, 82, 93, 75, 82 };
+            // Query Expression.
+            IEnumerable<int> scoreQuery = //query variable
+                from score in scores //required
+                where score > 80 // optional
+                orderby score descending // optional
+                select score; //must end with select or group
+            // Execute the query to produce the results
+            foreach (int testScore in scoreQuery)
+            {
+                Console.WriteLine(testScore);
+            }                  
+        }
+        // Outputs: 93 90 82 82      
+             </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="LamdaExpDiv" class="container-outsider">
+        <div class="container-fixed">
+            <div class="row">
+                Lambda expression is an anonymous function that you can use to create delegates or expression tree types.
+                By using lambda expressions, you can write local functions that can be passed as arguments or returned as
+                the value of function calls. Lambda expressions are particularly helpful for writing LINQ query expressions.
+                LINQ queries are based on generic types, which were introduced in version 2.0 of the .NET Framework
+            </div>
+            <div class="codeSnippetContainerCodeContainer">
+                <pre>
+                <span class="comment"> delegate use of lamda expression</span>
+            delegate int del(int i);
+            static void Main(string[] args)
+            {
+                del myDelegate = x => x * x;
+                int j = myDelegate(5); //j = 25
+            }
+                <span class="comment"> Expression tree use of lamda expression</span>
+        using System.Linq.Expressions;
+        namespace ConsoleApplication1
+        {
+            class Program
+            {
+                static void Main(string[] args)
+                {
+                    Expression&lt;del&gt; myET = x => x * x;
+                }
+            }
+        }
+        </pre>
+            </div>
+        </div>
+    </div>
+    <div id="ExpressionTreeDiv" class="container-outsider">
+        <div class="container-fixed">
+            <div class="row">
+                <em>Expression Tree</em>:represent code in a tree-like data structure, where each node is an expression, for example, a method call or a binary operation such as x < y.
+                You can compile and run code represented by expression trees.
+                <span class="clearfix" />
+                <h4>Incomplete</h4>
+            </div>
+        </div>
+    </div>
+    <div id="VS2008DIV" class="container-outsider">
+        <div class="container-fixed">
+            <div class="row">
+                <h4>Incomplete</h4>
+            </div>
+        </div>
+    </div>
+    <div id="NETFramework35Div" class="container-outsider">
+        <div class="container-fixed">
+            <div class="row">
+                <h4>Incomplete</h4>
+            </div>
+        </div>
+    </div>
+    <!-- #endregion -->
+<!-- #region C# 4.0 -->
+<div id="dynamicDiv" class="container-outsider">
+    <div class="container-fixed">
+        <div class="row">
+            <em>dynamic</em> keyword introduced in C# 4.0, has enabled the dynamic feature of C# language. Now a code can by-pass compile-time "type"  check. 
+            dynamic object <code>type</code> is inferred until run-time. This feature is a part of <em>Dynamic Language Runtime (DSL)</em>.
+            <span class="clearfix" />
+             The dynamic language runtime (DLR) is a runtime environment that adds a set of services for dynamic languages to the common language runtime (CLR). The DLR makes it easier to develop dynamic languages to run 
+            on the .NET Framework and to add dynamic features to statically typed languages.
+            <span class="clearfix" />
+            <span class="glyphicon glyphicon-info-sign">Note:</span>difference between <code>var</code> and <code>dynamic</code> keywords
+            <span class="clearfix" />
+
+            <table class="table table-bordered">
+                <tr><td>Var</td> <td>dynamic</td></tr>
+                <tr><td>introduced in 3.0</td><td>Introduce in 4.0</td></tr>
+                <tr><td>static type variable, type is inferred at compile-time</td><td>dynamic type variable</td></tr>
+                <tr><td>declaration and value assignment cannot be seperated</td><td>declaration and value assignment can be sperated.</td></tr>
+
+            </table>
+
+        </div>
+    </div>
+</div>
+<div id="NamedArgsDiv" class="container-outsider">
+    <div class="container-fixed">
+        <div class="row">
+            <em>Named Parameter</em>: allows you to pass value to specific argument while invoking a method.
+            <span class="clearfix" />
+            <em>Optional Parameter</em>: allows you to skip argument for which default value is assigned in method defination.
+            <span class="clearfix" />
+            <div class="codeSnippetContainerCodeContainer">
+                <pre>
+                <code>
+                    //Named Parameter  example:  
+                    public void method1(string param1 = "test", int param2, int param3 = 3)
+                    {
+                    ....
+                    }
+
+        //calling the above method in code. 
+        method1(param2:10) //here default arguments can be skipped and method1 called 
+                             passing only required param (named) ;
+        method1("Tom",10,12); // here method1 is called passing all arguments
+
+                </code>
+                </pre>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="GenericCoContraDiv" class="container-outsider">
+    <div class="container-fixed">
+        <div class="row">
+            From Wikipedia:
+            Within the type system of a programming language, a type conversion operator is:
+            <dl>
+                <dt>covariant</dt>
+                <dd>if it preserves the ordering, =, of types, which orders types from more specific to more generic;</dd>
+                <dt>contravariant</dt>
+                <dd>if it reverses this ordering, which orders types from more generic to more specific;
+                    invariant if neither of these apply.</dd>
+            </dl>
+            Now, C# was always covariant/contravarient when implicitly type casting between individual instance.
+            But when dealing with collection of objects covariant/contravarient was not implemented until C# 4.0 
+            <span class="clearfix" />
+            <pre>
+                <span class="comment">Assumption: Teacher type is derived from Person Type</span> 
+                Person p1 = new Person();   
+                Teacher t1 =  new Teacher(); 
+                p1 = t1 // this is valid.
+                t1 = p1 // even this one is valid.
+                BUT...
+                List&lt;Teacher> tList = new List&lt;Teacher>();
+                List&lt;Person> pList = tList; // Now this conversion was not valid, 
+                                                because it does not gaurantee that all instances of  Person 
+                                                is-a instance of Teacher.
+               
+                
+            </pre>
+            C# 4.0, introduced generic Typed Interface and delegates.
+            like <strong>incomplete</strong>
+        </div>
+    </div>
+</div>
+<div id="ComInteropDiv" class="container-outsider">
+    <div class="container-fixed">
+        <div class="row">
+            There are alot impovements has happened in C# 4.0 to deal with COM+ objects.
+            <span class="clearfix" />
+            <pre>
+            // Again, simplified for example.
+            using Microsoft.Office.Interop.Word;
+            var doc = Application.GetDocument("MyFile.txt");
+            doc.CheckSpelling();
+            </pre>
+        </div>
+    </div>
+</div>
+<!-- #endregion -->

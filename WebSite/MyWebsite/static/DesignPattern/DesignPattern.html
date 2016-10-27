@@ -1,0 +1,93 @@
+<div class="container">
+    <div class="row">
+        <div id="dgnpatternaccordian" class="panel-group col-md-4 col-lg-4">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <a href="#dgnpattern" data-toggle="collapse" data-parent="#dgnpatternaccordian">Creational Patterns</a>
+                    </div>
+                </div>
+                <div id="dgnpattern" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <ul>
+                            <li ng-click="dgnpatternCtrl.SetDetailSection('AbstractFactory')">  Abstract Factory</li>
+                            <li ng-click="dgnpatternCtrl.SetDetailSection('Builder')">	  Builder  </li>
+                            <li ng-click="dgnpatternCtrl.SetDetailSection('FactoryMethod')"> Factory Method</li>
+                            <li ng-click="dgnpatternCtrl.SetDetailSection('Prototype')">	    Prototype  </li>
+                            <li ng-click="dgnpatternCtrl.SetDetailSection('Singleton')">Singleton</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <a href="#dgnpattern2" data-toggle="collapse" data-parent="#dgnpatternaccordian">Structural Patterns</a>
+                    </div>
+                </div>
+                <div id="dgnpattern2" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <ul>
+
+                            <li ng-click="dgnpatternCtrl.SetDetailSection('Adapter')">	  Adapter </li>
+                            <li ng-click="dgnpatternCtrl.SetDetailSection('Bridge')">	 Bridge </li>
+                            <li ng-click="dgnpatternCtrl.SetDetailSection('Composite')">	Composite </li>
+                            <li ng-click="dgnpatternCtrl.SetDetailSection('Decorator')">	Decorator </li>
+                            <li ng-click="dgnpatternCtrl.SetDetailSection('Facade')">	  Facade </li>
+                            <li ng-click="dgnpatternCtrl.SetDetailSection('Flyweight')">	 Flyweight </li>
+                            <li ng-click="dgnpatternCtrl.SetDetailSection('Proxy')"> Proxy </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <a href="#dgnpattern3" data-toggle="collapse" data-parent="#dgnpatternaccordian">Behavioral Patterns</a>
+                    </div>
+                </div>
+                <div id="dgnpattern3" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <ul>
+
+                            <li ng-click="dgnpatternCtrl.SetDetailSection('ChainofRespon')">	Chain of Responsibility </li>
+                            <li ng-click="dgnpatternCtrl.SetDetailSection('Command')">	Command </li>
+                            <li ng-click="dgnpatternCtrl.SetDetailSection('Interpreter')">	 Interpreter </li>
+                            <li ng-click="dgnpatternCtrl.SetDetailSection('Iterator')">	 Iterator</li>
+                            <li ng-click="dgnpatternCtrl.SetDetailSection('Mediator')">	Mediator </li>
+                            <li ng-click="dgnpatternCtrl.SetDetailSection('Memento')">	 Memento </li>
+                            <li ng-click="dgnpatternCtrl.SetDetailSection('Observer')">	 Observer </li>
+                            <li ng-click="dgnpatternCtrl.SetDetailSection('State')">	 State </li>
+                            <li ng-click="dgnpatternCtrl.SetDetailSection('Strategy')">	 Strategys </li>
+                            <li ng-click="dgnpatternCtrl.SetDetailSection('Template Method')">	Template Method </li>
+                            <li ng-click="dgnpatternCtrl.SetDetailSection('Visitor')">	Visitor </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <a href="#dgnpattern35" data-toggle="collapse" data-parent="#dgnpatternaccordian">SOLID Pattern</a>
+                    </div>
+                </div>
+                <div id="dgnpattern35" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <ul>
+                            <li ng-click="dgnpatternCtrl.SetDetailSection('SRPrinciple')">	Single responsibility principle </li>
+                            <li ng-click="dgnpatternCtrl.SetDetailSection('OCPrinciple')">	 Open/closed principle </li>
+                            <li ng-click="dgnpatternCtrl.SetDetailSection('LSPrinciple')">	Liskov substitution principle </li>
+                            <li ng-click="dgnpatternCtrl.SetDetailSection('ISPrinciple')">	Interface segregation principle </li>
+                            <li ng-click="dgnpatternCtrl.SetDetailSection('DIPrinciple')">	Dependency inversion principle </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8 col-lg-8">
+            <div id="contentdiv" ng-bind-html="dgnpatternCtrl.DivSection">
+
+            </div>
+        </div>
+    </div>
+</div>
