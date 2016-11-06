@@ -732,3 +732,27 @@ span.fade{
 span.fade.in{
     display:block;
 }
+.codeSnippetContainerCodeContainer {
+    border-left: solid 1px #939393 !important;
+    border-right: solid 1px #939393;
+    border-top: solid 1px #939393;
+    clear: both;
+    margin-bottom: 12px;
+    position: relative;
+    top: -1px;
+    vertical-align: middle;
+    position: relative;
+    z-index: 1;
+}
+#contentdiv ul > li {
+   cursor:default;
+}
+.comment {
+    color:forestgreen;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:1.0em;
+}
+.keyword {
+    color:darkblue;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

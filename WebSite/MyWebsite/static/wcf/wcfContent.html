@@ -1,0 +1,457 @@
+﻿<div id="wcfoverview" class="container-outsider">
+    <div class="container-fixed">
+        <div class="row">
+            WCF stands for Windows Communication Foundation. It is a framework for building, configuring, and deploying network-distributed services.
+            A <em>service</em> exposes one or more <em>endpoints</em>, each of which exposes one or more service operations.
+            The endpoint of a service specifies:
+            <span class="clearfix" />
+            Address where the service can be found
+            <span class="clearfix" />
+            Binding that contains the information that describes how a client must communicate with the service
+            <span class="clearfix" />
+            Contract that defines the functionality provided by the service to its clients.
+            <span class="clearfix" />
+            <br />
+
+            WCF application consists of 3 components:
+            <span class="clearfix" />
+            WCF Service
+            <span class="clearfix" />
+            WCF Host
+            <span class="clearfix" />
+            WCF Client
+            <span class="clearfix" />
+            <span class="clearfix" />
+            <h2> Important Links </h2>
+            <a href="https://blogs.msdn.microsoft.com/santhoshonline/2010/07/01/howto-nettcpbinding-on-iis-and-things-to-remember/">
+                Hosting NetTcpBinding on IIS
+            </a>
+            <a href="https://blogs.msdn.microsoft.com/james_osbornes_blog/2010/12/07/hosting-in-iis-using-nettcpbinding/">
+                Hosting NetTcpBinding on IIS steps
+            </a>
+        </div>
+    </div>
+</div>
+<div id="wcf-webservice-difference" class="container-outsider">
+    <div class="container-fixed">
+        <div class="row">
+            <table class="table table-bordered">
+                <tr>
+                    <td></td>
+                    <td>WCF</td>
+                    <td>Web Service</td>
+                </tr>
+                <tr>
+                    <td>Attribute</td>
+                    <td>Uses <code>ServiceContract</code> for service class. And <code>OperationContract</code> for service method</td>
+                    <td>Uses <code>WebService</code> for service class. And <code>WebMethod</code> for service method</td>
+                </tr>
+                <tr>
+                    <td>Protocols</td>
+                    <td>Supports mutiple protocols to communicate such as HTTP, TCP, NamedPipe, MSMQ</td>
+                    <td>Supports only HTTP Protocol</td>
+                </tr>
+                <tr>
+                    <td>Hosting</td>
+                    <td>Supports Self-hosting, IIS hosting, WAS (Windows Activation Service) hosting, and Windows Service</td>
+                    <td>Supports only IIS hosting</td>
+                </tr>
+                <tr>
+                    <td>Serializer</td>
+                    <td>Uses <em>DataContractSerializer</em><code>System.Runtime.Serialization</code></td>
+                    <td>Uses <em>XmlSerializer </em><code>System.Xml.Serialization</code></td>
+                </tr>
+                <tr>
+                    <td>Bindings</td>
+                    <td>Supports serveral bindings such as BasicHttpBinding,WSHttpBinding,NETTcpBinding, MSMQBinding, NamedPipeBinding and more.</td>
+                    <td>Supports only web service binding via XML and SOAP</td>
+                </tr>
+                <tr>
+                    <td>Exception </td>
+                    <td>Supports serveral bindings such as BasicHttpBinding,WSHttpBinding,NETTcpBinding, MSMQBinding, NamedPipeBinding and more.</td>
+                    <td>Supports only web service binding via XML and SOAP</td>
+                </tr>
+                <tr>
+                    <td>Tool </td>
+                    <td><strong>SVCUtil.exe</strong>is used to generate client proxy for wcf</td>
+                    <td><strong>WSDL.exe</strong>is used to generate client proxy for web-service</td>
+                </tr>
+                <tr>
+                    <td>Two-way Communication </td>
+                    <td>WCF Supports one-way, two-way and request-response Communication mechanisim</td>
+                    <td>Web-Service only have request-response pattern communication</td>
+                </tr>
+                <tr>
+                    <td>MultiThreading </td>
+                    <td>WCF supports multithreading via <code>ServiceBehaviour</code>class</td>
+                    <td>Web-Service do not support</td>
+                </tr>
+                <tr>
+                    <td>Transactions </td>
+                    <td>WCF supports single Transaction across ServiceContracts</td>
+                    <td>Web-Service do not support multi-level transactions.In Short, Transactions do not flow across XML Web service methods.</td>
+                </tr>
+                <tr>
+                    <td>Security </td>
+                    <td>WCF supports single Transaction across ServiceContracts</td>
+                    <td>Web-Service do not support multi-level transactions. In Short, Transactions do not flow across XML Web service methods.</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<div id="architecture" class="container-outsider">
+    <div class="container-fixed">
+        <div class="row">
+            <div class="col-sm-offset-1"> <img src="/images/WCF-Architecture.PNG" /></div>
+        </div>
+    </div>
+</div>
+<div id="TransactionDiv" class="container-outsider">
+    <div class="container-fixed">
+        <div class="row">
+            <em>System.Transaction</em>: WCF implements WS-* specifications in Transactions.
+            A pure and successful transaction has four characteristics. You can use the mnemonic aid "ACID" to help you remember each of the
+            <span class="clearfix" />
+            <ul class="list-group">
+                <li class="list-group-item-text list-style-type:circle">Automic   : Either all operations get commited or none</li>
+                <li class="list-group-item-text list-style-type:circle">Consistent: Outcome for transaction should complete and in expected state</li>
+                <li class="list-group-item-text list-style-type:circle">Isolation : Each transaction should be 'private' until commited. That means, No DirtyRead is allowed</li>
+                <li class="list-group-item-text list-style-type:circle">Durability: Commited Transaction should be survive failures</li>
+            </ul>
+            <span class="clearfix" />
+        </div>
+    </div>
+</div>
+<div id="BehaviourDiv" class="container-outsider">
+    <div class="container-fixed">
+        <div class="row">
+            WCF implements Transactions using 3 attributes in "System.ServiceModel";:
+            <ul class="list-group">
+                <li class="list-group-item-text list-style-type:circle"> <code>[ServiceBehavior] </code></li>
+                <li class="list-group-item-text list-style-type:circle"> <code>[OperationBehavior] </code></li>
+                <li class="list-group-item-text list-style-type:circle"> <code>[TransactionFlow] </code></li>
+            </ul>
+            <span class="clearfix" />
+            <code>[ServiceBehaviour]</code>: is use to specify Transaction behaviour at Service Level.
+            Below properties are used in ServiceBehaviour
+            <dl>
+                <dt class="list-group-item-heading">AddressFilterMode</dt>
+                <dd>specifies the type of filter that the dispatcher system uses to locate the endpoint that handles requests.</dd>
+                <dt class="list-group-item-heading">AutomaticSessionShutdown</dt>
+                <dd>automatically closes the session when the channel is closed and the service has finished processing any remaining messages.</dd>
+                <dt>ConcurrencyMode</dt>
+                <dd>Enables internal threading model, enabling support for reentrant or multithreaded services.</dd>
+                <dt>ConfigurationName</dt>
+                <dd>value to locate in the configuration file. The default value is the fully qualified type name without assembly information.</dd>
+                <dt>IgnoreExtensionDataObject</dt>
+                <dd>Enables the run time to ignore extra serialization information that is not required to process the message.</dd>
+                <dt>IncludeExceptionDetailInFaults</dt>
+                <dd>specifies whether unhandled exceptions in a service are returned as SOAP faults. This is for debugging purposes only.</dd>
+                <dt>InstanceContextMode</dt>
+                <dd>specifies whether and when services and their service objects are to be recycled during an exchange with a client.</dd>
+                <dt>MaxItemsInObjectGraph</dt>
+                <dd>set limit on the number of items in an object graph that are serialized.</dd>
+                <dt>ReleaseServiceInstanceOnTransactionComplete</dt>
+                <dd>specifies whether the service object is recycled when a transaction completes.</dd>
+                <dt>TransactionAutoCompleteOnSessionClose</dt>
+                <dd>specifies whether outstanding transactions are completed when the session closes.</dd>
+                <dt>TransactionIsolationLevel</dt>
+                <dd>specifies the transaction isolation level that the contract supports.</dd>
+                <dt>TransactionTimeout</dt>
+                <dd>specifies the time period within which a transaction must complete or it aborts.</dd>
+                <dt>UseSynchronizationContext</dt>
+                <dd>indicates whether to synchronize inbound method calls with the user interface thread automatically.</dd>
+                <dt>ValidateMustUnderstand</dt>
+                <dd>informs the system whether it should confirm that SOAP headers marked as MustUnderstand have, in fact, been understood</dd>
+
+            </dl>
+        </div>
+    </div>
+</div>
+<div id="WcfAbcDiv" class="container-outsider">
+    <div class="container-fixed">
+        <div class="row">
+            A Hosted WCF service exposes one or more <code>endpoint</code> to communicate to the service.
+            An endpoint consists of Address, Binding and Contract:
+            <span class="clearfix" />
+            <dl>
+                <dt>Address</dt>
+                <dd>
+                    An address has a scheme, domain, port, and path in the following format: <em>scheme://domain[:port]/[path]</em>.
+                    <span class="clearfix"></span>
+                    <dl>
+                        <dd class="clearfix">net.tcp://localhost:9000</dd>
+                        <dd class="clearfix">net.pipe://mymachinename</dd>
+                        <dd class="clearfix">http://localhost:8000</dd>
+                        <dd class="clearfix">http://www.anydomain.com</dd>
+                        <dd class="clearfix">net.msmq://localhost</dd>
+                    </dl>
+                </dd>
+                <dt>Binding</dt>
+                <dd>
+                    Specifies the following communication terms:
+                    <dl>
+                        <dd class="list-style-type:circle">Transport Protocol</dd>
+                        <dd class="list-style-type:circle">Message Encoding format</dd>
+                        <dd class="list-style-type:circle">Security</dd>
+                        <dd class="list-style-type:circle">Transaction and more..</dd>
+                    </dl>
+                </dd>
+                <dt>Contract</dt>
+                <dd>
+                    Specifies the operations that can be invoked on the service. There are different contracts involved :
+                    <dl>
+                        <dd class="list-style-type:circle">[ServiceContract]</dd>
+                        <dd class="list-style-type:circle">[OperationContract]</dd>
+                        <dd class="list-style-type:circle">[MessageContract]</dd>
+                        <dd class="list-style-type:circle">[DataContract]</dd>
+                    </dl>
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>
+<div id="BindingOverviewDiv" class="container-outsider">
+    <div class="container-fixed">
+        <div class="row">
+            <em>Bindings</em>: Specifies communication mechanism to use to communicate "endpoint".
+            <dl>
+                <dd class="list-style-type:circle">Transport Protocol</dd>
+                <dd class="list-style-type:circle">Message Encoding format</dd>
+                <dd class="list-style-type:circle">Security</dd>
+                <dd class="list-style-type:circle">Transaction and more..</dd>
+            </dl>
+        </div>
+    </div>
+</div>
+<div id="BasicHttpBinding" class="container-outsider">
+    <div class="container-fixed">
+        <div class="row">
+            <em>BasicHttpBinding</em>: is the default Binding in WCF. It is backward compatible that means clients using traditional web-service, can use WCF services configured to use BasicHttpBinding.
+            <dl>
+                <dd class="list-group-item-text">It is suitable for communicating with ASP.NET Web services (ASMX)-based services that comfort with WS-Basic specifications.</dd>
+                <dd class="list-group-item-text">This binding uses HTTP as the transport and text/XML as the default message encoding.</dd>
+                <dd class="list-group-item-text">Security is disabled by default</dd>
+                <dd class="list-group-item-text">This binding does not support WS-* functionalities like WS- Addressing, WS-Security, WS-ReliableMessaging</dd>
+                <dd class="list-group-item-text">It is fairly weak on interoperability.</dd>
+            </dl>
+            <span class="clearfix" />
+            <div class="codeSnippetContainerCodeContainer">
+                <pre class="html">
+                &lt;basicHttpBinding>
+                &lt;binding name="basicHttpBindingDefaults" allowCookies="false"
+                bypassProxyOnLocal="false" hostNameComparisonMode="StrongWildcard"
+                maxBufferPoolSize="524288" maxBufferSize="65536"
+                maxReceivedMessageSize="65536" messageEncoding="Text" proxyAddress=""
+                textEncoding="utf-8" transferMode="Buffer" useDefaultWebProxy="true"
+                closeTimeout="00:01:00" openTimeout="00:01:00" receiveTimeout="00:10:00"
+                sendTimeout="00:01:00">
+   
+                &lt;readerQuotas maxArrayLength="16384" maxBytesPerRead="4096"
+                maxDepth="32"
+                maxNameTableCharCount="16384" maxStringContentLength="8192" />
+                &lt;security mode="None">
+                &lt;transport clientCredentialType="None" proxyCredentialType="None" realm="" />
+                &lt;message algorithmSuite="Basic256" clientCredentialType="UserName" />
+                &lt;/security>       
+                &lt;/binding>
+        &lt;/basicHttpBinding>   
+             </pre>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="WebHttpBinding" class="container-outsider">
+    <div class="container-fixed">
+        <div class="row">
+            <em>WebHttpBinding</em>: The WSHttpBinding is similar to the BasicHttpBinding but provides more Web service features. It uses the HTTP transport and provides message security, as does BasicHttpBinding, but it also provides transactions, reliable messaging, and WS-Addressing, either enabled by default or available through a single control setting.
+            <dl>
+                <dd class="list-group-item-text">Defines a secure, reliable, interoperable binding suitable for non-duplex service contracts.</dd>
+                <dd class="list-group-item-text">It offers lot more functionality in the area of interoperability.</dd>
+                <dd class="list-group-item-text">Security is disabled by default</dd>
+                <dd class="list-group-item-text">It supports WS-* functionality and distributed transactions with reliable and secure sessions using SOAP security.</dd>
+                <dd class="list-group-item-text">It uses HTTP and HTTPS transport for communication.</dd>
+                <dd class="list-group-item-text">Reliable sessions are disabled by default.</dd>
+            </dl>
+            <span class="clearfix" />
+            <div class="codeSnippetContainerCodeContainer">
+                <pre>
+            &lt;wsHttpBinding>
+                &lt;binding name="wsHttpBindingDefaults" allowCookies="false"
+            bypassProxyOnLocal="false" closeTimeout="00:01:00"
+            hostNameComparisonMode="StrongWildcard"
+            maxBufferPoolSize="524288" maxReceivedMessageSize="65536"
+            messageEncoding="Text" openTimeout="00:01:00"
+            receiveTimeout="00:10:00" proxyAddress="" sendTimeout="00:01:00"
+            textEncoding="utf-8" transactionFlow="false"
+            useDefaultWebProxy="true"> 
+   
+                &lt;readerQuotas maxArrayLength="16384" maxBytesPerRead="4096"
+            maxDepth="32" maxNameTableCharCount="16384"
+            maxStringContentLength="8192" />
+                &lt;reliableSession enabled="false" ordered="true"
+                    inactivityTimeout="oo:10:00" />
+ 
+                &lt;security mode="Message">
+                &lt;message algorithmSuite="Basic256" clientCredentialType="Windows"
+                    esatalishSecurityContext="true"
+                    negotiateServiceCredential="true" />
+                &lt;transport clientCredentialType="Windows"
+                        proxyCredentialType="None" realm="" />
+                &lt;/security>
+                &lt;/binding>
+            &lt;/wsHttpBinding>
+                </pre>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="NetTcpBinding" class="container-outsider">
+    <div class="container-fixed">
+        <div class="row">
+            <em>NetTcpBinding</em>:this binding makes use of the TCP protocol for communication
+            within the same network (intranet) and provides transport security and Windows authentication by default.
+            The message encoding happens binary format.
+            This binding is considered as the most reliable in contrast to others.
+            <div class="clearfix" />
+            <h2>Fuck you</h2>
+            <div class="clearfix"/>
+            <div class="codeSnippetContainerCodeContainer">
+                <pre>
+                <code>
+                             &lt;netTcpBinding>
+                               &lt;binding closeTimeout="TimeSpan"
+                                hostNameComparisonMode="StrongWildCard/Exact/WeakWildcard"
+                                listenBacklog="Integer"
+                                maxBufferPoolSize="integer"
+                                maxBufferSize="Integer"
+                                maxConnections="Integer"
+                                maxReceivedMessageSize="Integer"
+                                name="string"
+                                openTimeout="TimeSpan"
+                                portSharingEnabled="Boolean"
+                                receiveTimeout="TimeSpan"
+                                sendTimeout="TimeSpan"
+                                transactionFlow="Boolean"
+                                transactionProtocol="OleTransactions/WSAtomicTransactionOctober2004"
+                                transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse">
+                     &lt;reliableSession ordered="Boolean"
+                                inactivityTimeout="TimeSpan"
+                                enabled="Boolean" />
+                         &lt;security mode="None/Transport/Message/Both">
+                             &lt;message clientCredentialType="None/Windows/UserName/Certificate/CardSpace"
+	                        defaultProtectionLevel="None/Sign/EncryptAndSign"
+                            algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15" />
+                <transport clientCredentialType="None/Windows/Certificate"
+                           protectionLevel="None/Sign/EncryptAndSign" />
+                         &lt;/security>
+                         &lt;readerQuotas  maxArrayLength="Integer" maxBytesPerRead="Integer" 
+                                maxDepth="Integer" 
+                                maxNameTableCharCount="Integer"                     
+                                maxStringContentLength="Integer" />   
+                   &lt;/binding>
+            &lt;/netTcpBinding>
+                    </code>
+                </pre>
+            </div>
+
+
+            
+
+        </div>
+    </div>
+</div>
+<div id="NetHttpBinding" class="container-outsider">
+    <div class="container-fixed">
+        <div class="row">
+            <em>NetHttpBinding</em>:a binding designed for consuming HTTP or WebSocket services and uses binary encoding by default. NetHttpBinding will detect whether it is used with a request-reply contract or duplex contract and change its behavior to match - it will use HTTP for request-reply contracts and WebSockets for duplex contracts. This behavior can be overridden using the P:System.ServiceModel.NetHttpBinding.WebSocketTransportUsage setting
+            <dl>
+                <dd class="list-group-item-text">Always - This forces WebSockets to be used even for request-reply contracts</dd>
+                <dd class="list-group-item-text">Never - This prevents WebSockets from being used. Attempting to use a duplex contract with this setting will result in an exception.</dd>
+                <dd class="list-group-item-text">Always - This forces WebSockets to be used even for request-reply contracts.</dd>
+            </dl>
+            <div class="codeSnippetContainerCodeContainer">
+                <pre>
+                <code>
+                    &lt;netHttpBinding>
+                        
+                            &lt;binding allowCookies="Boolean"
+                            bypassProxyOnLocal="Boolean"
+                            closeTimeout="TimeSpan"
+                            hostNameComparisonMode="StrongWildCard/Exact/WeakWildcard"
+                            maxBufferPoolSize="Integer"
+                            maxBufferSize="Integer"
+                            maxReceivedMessageSize="Integer"
+                            messageEncoding="Binary/Text/Mtom"
+                            name="string"
+                            openTimeout="TimeSpan"
+                            proxyAddress="URI"
+                            receiveTimeout="TimeSpan"
+                            sendTimeout="TimeSpan"
+                            textEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding"
+                            transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse"
+                            useDefaultWebProxy="Boolean">
+                    &lt;security mode="None/Transport/Message/TransportWithMessageCredential/TransportCredentialOnly">
+                                <transport clientCredentialType="None/Basic/Digest/Ntlm/Windows/Certificate"
+                                proxyCredentialType="None/Basic/Digest/Ntlm/Windows"
+                                realm="string" />
+                                <message
+                                algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"
+                                clientCredentialType="UserName/Certificate"/>
+                    &lt;/security>
+                        &lt;readerQuotas
+                        maxArrayLength="Integer"
+                        maxBytesPerRead="Integer"
+                        maxDepth="Integer"             
+                        maxNameTableCharCount="Integer"                
+                        maxStringContentLength="Integer" />
+                    &lt;/binding>
+                    &lt;/netHttpBinding>
+                </code>
+                </pre>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="NetNamedPipeBinding" class="container-outsider">
+    <div class="container-fixed">
+        <div class="row">
+           <em>NetNamedPipeBinding</em>: Defines a binding that is secure, reliable, optimized for on-machine cross process communication. By default, it generates a runtime communication stack with WS-ReliableMessaging for reliability, transport security for transfer security, named pipes for message delivery, and binary message encoding.
+            <div class="codeSnippetContainerCodeContainer">
+                <pre>
+                    <code>
+                    &lt;netNamedPipeBinding>
+                      &lt;binding closeTimeout="TimeSpan"
+                                hostNameComparisonMode="StrongWildCard/Exact/WeakWildcard"
+                                maxBufferPoolSize="Integer"
+                                maxBufferSize="Integer"
+                                maxConnections="Integer"
+                                maxReceivedMessageSize="Integer"
+                                name="string"
+                                openTimeout="TimeSpan"
+                                receiveTimeout="TimeSpan"
+                                sendTimeout="TimeSpan"
+                                transactionFlow="Boolean"
+                                transactionProtocol="OleTransactions/WS-AtomicTransactionOctober2004"
+                                transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse"
+                    &lt;security mode="None/Transport">
+                    &lt;transport  protectionLevel="None/Sign/EncryptAndSign" />
+                    &lt;/security>
+                    &lt;readerQuotas             
+                        maxArrayLength="Integer"            
+                        maxBytesPerRead="Integer"            
+                        maxDepth="Integer"             
+                        maxNameTableCharCount="Integer"                     
+                        maxStringContentLength="Integer" />   
+                    &lt;/binding>
+                    &lt;/netNamedPipeBinding>
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="">
+
+</div>

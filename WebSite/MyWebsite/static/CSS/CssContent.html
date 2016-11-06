@@ -1,0 +1,131 @@
+﻿<div class="container-fluid">
+    <div id="VersionHistory">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel with-nav-tabs panel-primary">
+                    <div class="panel-heading">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#tab1primary" data-toggle="tab">CSS 1</a></li>
+                            <li><a href="#tab2primary" data-toggle="tab">CSS 2</a></li>
+                            <li><a href="#tab3primary" data-toggle="tab">CSS 3</a></li>
+                            <li class="dropdown">
+                                <a data-toggle="dropdown">More <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#tab4primary" data-toggle="tab">CSS 4</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="panel-body">
+                        <div class="tab-content">
+                            <div class="tab-pane fade in active" id="tab1primary">
+                                <ul class="list-group">
+                                    <li>Published in 1996</li>
+                                    <li>Supports Fonts properties such as typeface and emphasis </li>
+                                    <li>Color of text, backgrounds, and other elements</li>
+                                    <li>Text attributes such as spacing between words, letters, and lines of text </li>
+                                    <li> Alignment of text, images, tables and other elements     </li>
+                                    <li> Margin, border, padding, and positioning for most elements </li>
+                                    <li> Unique identification and generic classification of groups of attributes</li>
+                                </ul>
+                            </div>
+                            <div class="tab-pane fade" id="tab2primary">
+                                <ul class="list-group">
+                                    <li>Published in 1998</li>
+                                    <li>Contains everything from CSS 1, plus new capabilities like absolute, relative, and fixed positioning of elements and z-index, the concept of media types, support for aural style sheets (which were later replaced by the CSS 3 speech modules)[37] and bidirectional text, and new font properties such as shadows.</li>
+                                </ul>
+                            </div>
+                            <div class="tab-pane fade" id="tab3primary">
+                                CSS3 - brought the concept of moduratization. This implies CSS is no longer be a single generic file.
+                                Independent Modules for specific aspects of styling created and would evovle.
+                            </div>
+                            <div class="tab-pane fade" id="tab4primary"> CSS 4 : is in draft</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 hidden-sm">
+                <img src="images/cssevolution.png" alt="CSS versions" />
+            </div>
+        </div>
+    </div>
+
+    <!-- CSS Step 1-->
+    <div id="CssIntro" class="row">
+        <div class="col-xs-12">
+            <em>CSS</em>: Cascading Style Sheet. It is used to format HTML or any mark-up language content.
+            CSS contains the format (presentation) details for a markup content (html). Separation of concern enable you to seperate you styling into <code>.css</code> file.
+            <br />
+            Adding external css file:
+            <code class="clearfix">
+                    &lt;link rel="stylesheet" type="text/css" href="example.css" /> 
+            </code>
+            Adding page css:
+            <code class="clearfix">
+                &lt;style type="text/css">
+                .body {
+                    background: fixed;
+                }
+                 &lt;/style>
+            </code>
+            Adding inline css:
+            <code class="clearfix">
+               style="font-family:arial;clearfix"
+            </code>
+        </div>
+    </div>
+
+    <div id="CssSyntax">
+        <div class="row">
+            <div class="col-sm-12">
+                <h3 class="clearfix">CSS syntax has two parts: <em>Selector</em> and <em> Declaration.</em></h3>
+                <img src="images/Csssyntax.png" alt="syntax img" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <strong class="clearfix">Selectors are specify the target of styling</strong>
+                <strong class="clearfix">Types Of Selector</strong>
+                <div class="row">
+                    <div class=col-md-3>
+                        <ul>
+                            <li class="active"><a href="#htmlSelector" data-toggle="tab">HTML Tag</a></li>
+                            <li><a href="#classSelector" data-toggle="tab">class attribute</a></li>
+                            <li><a href="#IDSelector" data-toggle="tab">ID</a></li>
+                            <li><a href="#MixedSelector" data-toggle="tab">Mixed</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-8 col-md-offset-1" id="cssyntaxSdiv">
+                        <span id="htmlSelector" class="fade in active">
+                            <code>
+                                <span class="clearfix"> HTML tag css defination</span> 
+                                 p{ font: verdana; font-size:20px; } <br />
+                                 div{ background-color: red; padding:20px; }
+                            </code>
+                        </span>
+                        <span id="classSelector" class="fade">
+                            <code>
+                                <span class="clearfix">css class defination start with <span class="glyph icon-dot-single"></span></span>
+                                .class1{ font: verdana; font-size:20px; } <br />
+                                .class2{ background-color: red; padding:20px; }
+                            </code>
+                        </span>
+                        <span id="IDSelector" class="fade">
+                            <code>
+                                <span class="clearfix">css Id defination start with #</span>
+                                #ParaId{ font: verdana; font-size:20px; } <br />
+                                #DivId{ background-color: red; padding:20px; }
+                            </code>
+                        </span>
+                        <span id="MixedSelector" class="fade">
+                            class test
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
