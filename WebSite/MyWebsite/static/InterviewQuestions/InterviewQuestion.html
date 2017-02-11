@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        <div id="InterviewQuestionsaccordian" class="panel-group col-md-4 col-lg-4">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <a href="#IQaccordian" data-toggle="collapse" data-parent="#InterviewQuestionsaccordian">Interview Questions</a>
+                    </div>
+                </div>
+                <div id="IQaccordian" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <ul>
+                            <li ng-click="cInterviewQuestionCtrl.SetDetailSection('MiscInterviewQuestions')">  Abstract Factory</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8 col-lg-8">
+            <div id="contentdiv" ng-bind-html="cInterviewQuestionCtrl.DivSection">
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -18,7 +18,7 @@ function routConfig($routeProvider, $locationProvider) {
         .when("/BootStrap", { templateUrl: '/static/BootStrap/BootStrap.html', controller: 'cBootStrapController', controllerAs: 'cBootStrapCtrl', title: 'C-Sharp' })
         .when("/DesignPattern", { templateUrl: '/static/DesignPattern/DesignPattern.html', controller: 'cDesignPatternController', controllerAs: 'dgnpatternCtrl', title: 'C-Sharp' })
         //.when("/Algorithm", { templateUrl: '/static//csharp.html', controller: 'cDesignPatternController', controllerAs: 'cDesignPatternCtrl', title: 'C-Sharp' })
-        //.when("/InterviewQuestion", { templateUrl: '/static//csharp.html', controller: 'cDesignPatternController', controllerAs: 'cDesignPatternCtrl', title: 'C-Sharp' })
+        .when("/InterviewQuestion", { templateUrl: '/static/InterviewQuestions/InterviewQuestion.html', controller: 'cInterviewQuestionController', controllerAs: 'cInterviewQuestionCtrl', title: 'Interview Question' })
         //.when("/RelatedNews", { templateUrl: '/static//csharp.html', controller: 'cDesignPatternController', controllerAs: 'cDesignPatternCtrl', title: 'C-Sharp' })
         .otherwise({ redirectTo: '/Index.html' });
 
